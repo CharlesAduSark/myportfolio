@@ -2724,6 +2724,12 @@ td:last-child {
     margin-bottom: var(--vspace-3_5);
     position     : relative;
 }
+.section-header2 {
+    display      : flex;
+    align-items  : flex-start;
+    margin-bottom: var(--vspace-3_5);
+    position     : relative;
+}
 
 .section-header .text-display-title {
     padding-top  : 0.5em;
@@ -4440,4 +4446,77 @@ td:last-child {
     .ss-go-top {
         right: -2rem;
     }
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    gap: 50px;
+    padding-left: 80px;
+    max-width: 1200px;
+    margin-left: 60px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.overlay p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+}
+
+.overlay a {
+    color: #fff;
+    background-color: #ff6347;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.overlay a:hover {
+    background-color: #ff4500;
 }
